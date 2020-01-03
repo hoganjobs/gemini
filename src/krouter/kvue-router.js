@@ -6,7 +6,7 @@ let Vue;
 class KVueRouter {
   constructor(options) {
     this.$options = options;
-    
+    console.log(this.$options);
     Vue.util.defineReactive(this, 'current', '/')
 
     window.addEventListener('hashchange', this.onHashChange.bind(this))
