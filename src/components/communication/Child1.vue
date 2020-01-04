@@ -20,7 +20,7 @@
     },
     methods: {
       eat() {
-        console.log('go home')
+        console.log('Got it. just go home now')
       }
     },
   }
