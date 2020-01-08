@@ -27,6 +27,8 @@
       validate() {
         const value = this.form.model[this.prop];
         console.log(value);
+        // const rules = this.form.model[this.rules]
+        // console.log(rules);
       }
     },
   }
