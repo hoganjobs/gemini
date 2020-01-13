@@ -22,6 +22,12 @@ export default {
     // HelloWorld,
     // communication,
     FormExample
-  }
+  },
+  mounted () {
+    this.$toast({
+      msg: "toast",
+      duration: 2000
+    });
+  },
 }
 </script>
