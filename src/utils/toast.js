@@ -11,8 +11,9 @@ function create(Components, props) {
   }).$mount()
   // 获取真实dom
   document.body.appendChild(vm.$el);
-  // 删除
+  // 获取实例
   const comp = vm.$children[0];
+  // 定义清除方法， 删除
   comp.remove = function() {
     document.body.removeChild(vm.$el)
   }

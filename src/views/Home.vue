@@ -24,6 +24,7 @@ export default {
     FormExample
   },
   mounted () {
+    // 调用toast提示框
     this.$toast({
       msg: "toast",
       duration: 2000
