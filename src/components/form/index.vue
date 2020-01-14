@@ -31,8 +31,8 @@
           password: ""
         },
         rules: {
-          username: [{ requried: true, message: "请输入用户名" }],
-          password: [{ requried: true, message: "请输入密码" }]
+          username: [{ required: true, message: "请输入用户名" }],
+          password: [{ required: true, message: "请输入密码" }]
         }
       }
     },
