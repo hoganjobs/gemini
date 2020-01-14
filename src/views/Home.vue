@@ -25,10 +25,10 @@ export default {
   },
   mounted () {
     // 调用toast提示框
-    this.$toast({
-      msg: "toast",
-      duration: 2000
-    });
+    // this.$toast({
+    //   msg: "toast",
+    //   duration: 2000
+    // });
   },
 }
 </script>

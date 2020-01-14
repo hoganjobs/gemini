@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import Schema from 'async-validator'
   export default {
     inject: ["form"],
     data() {
@@ -26,10 +27,24 @@
     methods: {
       validate() {
         const value = this.form.model[this.prop];
-        console.log(value);
-        // const rules = this.form.model[this.rules]
-        // console.log(rules);
+        const rules = this.form.rules[this.prop];
+        const desc = { [this.prop]: rules };
+
+        const schema = new Schema(desc);
+        console.log(value, "|", rules, "|", desc);
+        return schema.validate({ [this.prop]: value }, errors =>{
+          if(errors) {
+            this.error = errors[0].message;
+          } else {
+            this.error = "";
+          }
+        })
       }
+    },
+    mounted () {
+      this.$on("validate", () => {
+        this.validate();
+      });
     },
   }
 </script>
