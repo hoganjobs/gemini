@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <img src="../assets/shape.jpg" alt="shape">
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <!-- <communication></communication> -->
     <slot-example></slot-example>
