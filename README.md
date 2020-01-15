@@ -1,4 +1,4 @@
-# gt
+# study-vue
 
 ## Project setup
 ```
