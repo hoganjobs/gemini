@@ -29,12 +29,19 @@ server.get('/', (req, res) => {
     })
     
     // 3.用渲染器渲染vue实例
-    renderer.renderToString(app).then(html =>{
-        res.send(html)
-    }).catch(err => {
-        res.status(500)
-        res.send('Internal Server Error, 500!')
-    })
+    // renderer.renderToString(app).then(html =>{
+    //     res.send(html)
+    // }).catch(err => {
+    //     res.status(500)
+    //     res.send('Internal Server Error, 500!')
+    // })
+    renderer.renderToString(app, (err, html) => {
+        if (err) {
+          res.status(500).end('Internal Server Error, 500!')
+          return
+        }
+        res.end(html)
+      })
 })
 
 // 监听端口
