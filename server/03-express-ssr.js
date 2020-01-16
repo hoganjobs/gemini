@@ -5,8 +5,9 @@ const express = require('express')
 const server = express()
 
 // 2.获取渲染器实例
-const { createRenderer } = require('vue-server-renderer')
-const renderer = createRenderer()
+// const { createRenderer } = require('vue-server-renderer')
+// const renderer = createRenderer()
+const renderer = require('vue-server-renderer').createRenderer()
 
 // 编写路由处理不同url请求
 server.get('/', (req, res) => {
